@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import path from 'path';
 import connectDatabase from "./config/database.js";
 import colors from "colors";
 import errorHandler from "./utils/errorHandler.js";
