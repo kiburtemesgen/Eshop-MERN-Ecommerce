@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.navbar-nav > li {
+  font-size: 25px;
+  }
+.dropdown-menu {
+    font-size: 25px;
+  }
+

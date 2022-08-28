@@ -17,8 +17,8 @@ app.use(express.json());
 app.use("/users", userRoutes);
 app.use("/products", productRoutes);
 app.use("/orders", orderRoutes);
-console.log(process.env.NODE_ENV);
 
+const __dirname = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/build")));

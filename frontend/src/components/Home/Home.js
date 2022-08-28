@@ -141,7 +141,7 @@ const Home = () => {
 
             <div className="col-12  col-md-9 col-lg-9">
               <ProductCarousel />
-              <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3 py-5">
+              <div className="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3 py-5">
             {products.map((product) => (
               <Product key={product._id} product={product}/>
             ))}
@@ -154,7 +154,7 @@ const Home = () => {
           <h2> Top Products</h2>
           <ProductCarousel />
           <h2 className="mt-5">Latest Products</h2>
-          <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
+          <div className="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
             {products.map((product) => (
               <Product key={product._id} product={product}/>
             ))}

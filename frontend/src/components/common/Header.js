@@ -42,63 +42,103 @@ function Header() {
             <div className="col-md-5 my-auto">
               <SearchBox></SearchBox>
             </div>
-            <div className="col-md-5 d-flex justify-content-end align-items-center">
-              <ul className="nav d-flex justify-content-end">
-                <></>
-                <div className="bg-black">
-                  <Link
-                    to="/cart"
-                    className="text-white"
-                    style={{ textDecoration: "none" }}
-                  >
-                    <div className="cart d-flex align-items-end">
-                      
-                      <span
-                        className={`${totalCartItems(cartItems) === 0 ? "pt-2 px-1" : "p1 fa-stack has-badge pt-1"}`}
-                        data-count ={`${totalCartItems(cartItems) === 0 ? '' : totalCartItems(cartItems)}`}
-                      >
-
-                        {/* <i
-                          className="p3 fa fa-shopping-cart fa-stack-1x fa-inverse bg-black"
-                        ></i> */}
-                         <i className="fa fa-shopping-cart text-white" aria-hidden="true"></i>
-                      </span>
-                      <span style={{ fontSize: "16px" }}>Cart</span>
-                    </div>
-                  </Link>
+            <div className="col-md-5 d-flex justify-content-between align-items-center justify-content-md-end justify-content-lg-end">
+              <div>
+                <div className=" d-md-none d-lg-none">
+                <Link to="/">
+                <img
+                  style={{ width: "50px", height: "50px" }}
+                  src="https://craftindika.com/wp-content/uploads/2021/12/eshop-logo-full.png"
+                  alt=""
+                />
+              </Link>
                 </div>
-               
+             
+              </div>
+              <div className=" d-flex justify-content-end align-items-center">
+                <ul className="nav d-flex justify-content-end">
+                  <Nav className="bg-black mx-3">
+                    <Link
+                      to="/cart"
+                      className="text-white"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <div className="cart d-flex align-items-end">
+                        <span
+                          className={`${
+                            totalCartItems(cartItems) === 0
+                              ? "pt-2 px-1"
+                              : "p1 fa-stack has-badge pt-1"
+                          }`}
+                          data-count={`${
+                            totalCartItems(cartItems) === 0
+                              ? ""
+                              : totalCartItems(cartItems)
+                          }`}
+                        >
+                          <i
+                            className="fa fa-shopping-cart text-white"
+                            aria-hidden="true"
+                          ></i>
+                        </span>
+                        <span style={{ fontSize: "16px" }}>Cart</span>
+                      </div>
+                    </Link>
+                  </Nav>
 
-                {userInfo ? (
-                  <NavDropdown title={userInfo.name} className="text-white">
-                    <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-                    <NavDropdown.Item onClick={logoutHandler}>
-                      Logout
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                ) : (
-                  <Nav.Link href="/login">
-                    <i className="fas fa-user"></i>Sign In
-                  </Nav.Link>
-                )}
-                {userInfo && userInfo.role === "admin" && (
-                  <NavDropdown
-                    title="Admin"
-                    id="adminmenu"
-                    className="text-white"
-                  >
-                    <NavDropdown.Item href="/admin/userlist">Users</NavDropdown.Item>
+                  {userInfo ? (
+                    <NavDropdown
+                      title={
+                        <span
+                          style={{ fontSize: "16px" }}
+                          className="text-white my-auto"
+                        >
+                          {userInfo.name}
+                        </span>
+                      }
+                      className="text-white"
+                    >
+                      <NavDropdown.Item href="/profile">
+                        Profile
+                      </NavDropdown.Item>
+                      <NavDropdown.Item onClick={logoutHandler}>
+                        Logout
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                  ) : (
+                    <Nav.Link href="/login">
+                      <i className="fas fa-user"></i>Sign In
+                    </Nav.Link>
+                  )}
+                  {userInfo && userInfo.role === "admin" && (
+                    <NavDropdown
+                      title={
+                        <span
+                          style={{ fontSize: "16px" }}
+                          className="text-white my-auto"
+                        >
+                          Admin
+                        </span>
+                      }
+                      id="adminmenu"
+                      className="text-white"
+                    >
+                      <NavDropdown.Item href="/admin/userlist">
+                        Users
+                      </NavDropdown.Item>
 
-                    <NavDropdown.Item href="/admin/productlist">
-                      Products
-                    </NavDropdown.Item>
+                      <NavDropdown.Item href="/admin/productlist">
+                        Products
+                      </NavDropdown.Item>
 
-                    <NavDropdown.Item href="/admin/orderlist">
-                      Orders
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                )}
-              </ul>
+                      <NavDropdown.Item href="/admin/orderlist">
+                        Orders
+                      </NavDropdown.Item>
+                    </NavDropdown>
+                  )}
+                </ul>
+              </div>
+           
             </div>
           </div>
         </div>
