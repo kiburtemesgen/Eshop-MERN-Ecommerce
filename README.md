@@ -1,6 +1,6 @@
 # Eshop-MERN-Ecommerce
 
-##Tech Stack
+## Tech Stack
 * <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" /> is the Backend environment for this application
 * <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" /> is used to handle requests, routes
 * <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" /> is the database of the application
@@ -9,7 +9,7 @@
 * <img src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white" /> to manage the state of the Application
 * The application is deployed on ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
-##Features
+## Features
 *Login/Signup User Account
 *Update Profile/Password User Account
 *Forgot/Reset Password
@@ -25,10 +25,10 @@
 *Admin: Create, Edit, Delete and see list of Products
 *Admin: List of All Orders
 
-##Project Link
+## Project Link
 ![Eshop](http://eshopsite.herokuapp.com/)
 
 
-##Contact
+## Contact
 <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
 kiburezelast@gmail.com
